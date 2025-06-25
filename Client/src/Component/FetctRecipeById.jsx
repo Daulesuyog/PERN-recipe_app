@@ -1,11 +1,12 @@
-import React, { useContext, useEffect, useState } from "react";
-import { AppContext } from "../context/App_Context";
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "../Context/App_Context.jsx";
 import { Link , useLocation} from "react-router-dom";
+
 
 const FetchRecipeById = ({ id }) => {
   const location = useLocation()
   const { RecipeById } = useContext(AppContext);
-  const [recipe, setrecipe] = useState("");
+   const [recipe, setrecipe] = useState("");
   
   //   console.log(id )
   useEffect(() => {
